@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	min-width: 100%;
+	min-height: 100%;
+	background-color: steelblue;
+}
+
+#score {
+	font-family: "Squada One", cursive;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#board {
+	border: 1px solid #555;
+	width: 90vmin;
+	height: 90vmin;
+	margin: 0 auto;
+	background-color: wheat;
+}
+
+#controls {
+	display: none;
+}
+
+@media only screen and (max-width: 500px) {
+	#controls {
+		display: block;
+		position: relative;
+		text-align: center;
+		width: 65vmin;
+		height: 65vmin;
+		margin: 20px auto;
+
+		button {
+			position: absolute;
+			width: 25vmin;
+			height: 25vmin;
+			font-size: 3rem;
+			text-align: center;
+			border-radius: 50%;
+			border: 1px solid #000;
+			outline: none;
+
+			box-shadow: 2px 2px 2px #444;
+			&:active {
+				box-shadow: inset 2px 2px 2px #444;
+			}
+		}
+
+		#up {
+			top: 0;
+			transform: translateX(-50%);
+		}
+		#down {
+			bottom: 0;
+			transform: translateX(-50%);
+		}
+		#left {
+			margin: auto;
+			left: 0;
+			top: 0;
+			bottom: 0;
+		}
+		#right {
+			margin: auto;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+}
